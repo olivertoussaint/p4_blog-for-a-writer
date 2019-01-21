@@ -6,6 +6,6 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Test</h1>
+	<h1>Billet simple pour l'Alaska</h1>
 </body>
 </html>
