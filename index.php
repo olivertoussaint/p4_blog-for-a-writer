@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>Blog pour un écrivain</title>
+	<title>Blog de Jean Forteroche</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
