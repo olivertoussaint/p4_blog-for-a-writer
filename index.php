@@ -1,45 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Blog de Jean Forteroche</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<h1>Billet simple pour l'Alaska</h1>
-	<?php
+<?php
 try
 {
-	// On se connecte à MySQL
-	$bdd = new PDO('mysql:host=localhost;dbname=blog_jean_forteroche;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=blog_jean_forteroche;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
-	// En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : '.$e->getMessage());
+    die('Erreur : '.$e->getMessage());
 }
 
-// Si tout va bien, on peut continuer
+$req = $bdd->query('SELECT id, blog_post_title, blog_content, DATE_FORMAT (blog_post_date, \'%d/%m/%Y à %Hh%imin%ss\') AS blog_post_date_fr FROM blog_posts ORDER BY id DESC LIMIT 0,5');
 
-// On récupère tout le contenu de la table jeux_video
-$reponse = $bdd->query('SELECT * FROM jeux_video');
-
-// On affiche chaque entrée une à une
-while ($donnees = $reponse->fetch())
-{
+require('affichageAccueil.php');
 ?>
-    <p>
-    <strong>Jeu</strong> : <?php echo $donnees['nom']; ?><br />
-    Le possesseur de ce jeu est : <?php echo $donnees['possesseur']; ?>, et il le vend à <?php echo $donnees['prix']; ?> euros !<br />
-    Ce jeu fonctionne sur <?php echo $donnees['console']; ?> et on peut y jouer à <?php echo $donnees['nbre_joueurs_max']; ?> au maximum<br />
-    <?php echo $donnees['possesseur']; ?> a laissé ces commentaires sur <?php echo $donnees['nom']; ?> : <em><?php echo $donnees['commentaires']; ?></em>
-   </p>
-<?php
-}
-
-$reponse->closeCursor(); // Termine le traitement de la requête
-
-?>
-
-</body>
-</html>
