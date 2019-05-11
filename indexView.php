@@ -47,12 +47,12 @@
             <!-- /.container-fluid -->
         </nav>
          <div class="landing-text">
-            <h1 class="main-title">Billet simple pour L'alaska</h1>
+            <h1 class="main-title">Billet simple pour L'Alaska</h1>
          </div>
       </div>
       <div class="container">
          <div class="row">
-            <h2>Les derniers épisodes</h2>
+            <h2 class="last_chapters">Les derniers épisodes</h2>
             <hr class="separate">
             <div class="col-sm-6 col-sm-offset-3">
             <?php            
@@ -61,8 +61,8 @@
             ?>
             <div class="news">
                <h3>
-                  <?php echo htmlspecialchars($data['blog_post_title']); ?>
-                  <em>le <?php echo $data['blog_post_date_fr']; ?></em>
+                  <?= htmlspecialchars($data['blog_post_title']) ?>
+                  <em>le <?= $data['blog_post_date_fr'] ?></em>
                </h3>
                <p>
                   <?php
@@ -78,11 +78,11 @@
                   ?>
                   <br />
                   <br />
-                  <strong><a href="comments.php?blog_post=<?php echo $data['id']; ?>" class="btn btn-success">Lire la suite</a></strong>
+                  <strong><a href="comments.php?blog_post=<?= $data['id'] ?>" class="btn btn-success">Lire la suite</a></strong>
                </p>
             
             <div class="comment">
-               <em><a href="comments.php?blog_post=<?php echo $data['id']; ?>">Commentaires</a></em>
+               <em><a href="comments.php?blog_post=<?= $data['id'] ?>">Commentaires</a></em>
             </div>
             </div>
             <?php
