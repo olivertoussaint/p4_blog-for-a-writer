@@ -32,7 +32,7 @@
             </p>
         </div>
         <hr>
-        <h4><i class="fa fa-comments" aria-hidden="true"></i> Commentaires</h4>
+        <h4><i class="fa fa-comments" aria-hidden="true"><?= htmlspecialchars($data['NbComments']) ?></i> Commentaires</h4>
 
         <?php
         while ($comment = $comments->fetch())
