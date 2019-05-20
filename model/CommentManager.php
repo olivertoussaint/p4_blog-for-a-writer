@@ -1,5 +1,7 @@
 <?php
-class CommentManager 
+require_once("model/Manager.php");
+
+class CommentManager extends Manager 
 {
 	public function getComments($postId)
 	{
@@ -19,10 +21,4 @@ class CommentManager
 
         return $affectedLines;
     }
-
-    private function dbConnect()
-	{
-		$db = new PDO('mysql:host=localhost;dbname=blog_jean_forteroche;charset=utf8', 'root', ''); 
-		return $db;
-	}
 }
