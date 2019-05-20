@@ -3,7 +3,7 @@ html,body {
   width: 100%;
 }
 
-.navbar-brand {
+.navbar-brand-align {
   padding: 0px 35px;
   min-height: 170px;
 }
@@ -22,6 +22,7 @@ html,body {
 }
 
 .navbar-default .navbar-nav>li>a {
+  margin-top: 15px;
   color: #202020;
 }
 
@@ -41,7 +42,7 @@ html,body {
 }
 
 #home {
-  background: url(../../images/alaska_1.jpeg) no-repeat center center fixed;
+  background: url(../../public/images/alaska_1.jpeg) no-repeat center center fixed;
   display: table;
   height: 700px;
   position: relative;
@@ -50,7 +51,7 @@ html,body {
 }
 
 #home:hover {
-  background: url(../../images/alaska_2.jpeg) no-repeat center center fixed;
+  background: url(../../public/images/alaska_2.jpeg) no-repeat center center fixed;
   display: table;
   height: 700px;
   position: relative;
@@ -85,8 +86,8 @@ hr.separate{
   width: 52.5%;
 }
 
-.container {
-  background: url(../../images/alaska_2.jpeg) no-repeat center center fixed;
+.container-post {
+  background: url(../../public/images/alaska_2.jpeg) no-repeat center center fixed;
   display: table;
   height: 100%;
   position: relative;
