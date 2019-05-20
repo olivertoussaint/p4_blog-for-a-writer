@@ -1,5 +1,7 @@
 <?php
-class PostManager 
+require_once("model/Manager.php");
+
+class PostManager extends Manager 
 {
 	public function getPosts()
 	{
@@ -10,6 +12,13 @@ class PostManager
 		return $req;
 	}
 
+	public function setResume()
+	{
+		$db = $this->dbConnect();
+		$resume = substr($this->getPost(), 0, 500);
+		return $resume;
+	}
+
 	public function getPost($postId)
 	{
 		$db = $this->dbConnect();
@@ -18,11 +27,5 @@ class PostManager
 		$post = $req->fetch();
 
 		return $post;
-	}
-
-	private function dbConnect()
-	{
-		$db = new PDO('mysql:host=localhost;dbname=blog_jean_forteroche;charset=utf8', 'root', ''); 
-		return $db;
 	}
 }
