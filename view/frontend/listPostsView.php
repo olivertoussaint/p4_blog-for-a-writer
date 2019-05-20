@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="./public/images/Logo_projet_4.png"></a>
+                    <a class="navbar-brand-align" href="#"><img src="./public/images/Logo_projet_4.png"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-collapse-main">
@@ -30,17 +30,9 @@
                         <li><a class="active" href="index.php"><i class="fa fa-home fa-lg" aria-hidden="true"></i> Home<span class="sr-only">(current)</span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connection <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li class="center-element-1" title="Créer un compte membre">New member ?</li>
-                                <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="center-element-2" title="Espace membre">Member access</li>
-                                <li><a href="register.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                   </ul>
                 </div>
                 <!-- /.navbar-collapse -->  
             </div>
@@ -51,7 +43,7 @@
             <h1 class="main-title">Billet simple pour L'Alaska</h1>
          </div>
       </div>
-      <div class="container">
+      <div class="container-post">
          <div class="row">
             <h2 class="last_chapters">Les derniers épisodes</h2>
             <hr class="separate">
@@ -66,17 +58,7 @@
                   <em>le <?= $data['blog_post_date_fr'] ?></em>
                </h3>
                <p>
-                  <?php
-                     $lg_max = 500;
-                     $blog_content = $data['blog_content'];
-                     $blog_content = strip_tags($blog_content);
-                     if (strlen($blog_content) > $lg_max) {
-                       $blog_content = substr($blog_content,0, $lg_max);
-                       $last_space = strripos($blog_content, " ");
-                       $blog_content = substr($blog_content,0, $last_space)." [...]";
-                     }
-                     echo $blog_content;   
-                  ?>
+                  <?= nl2br(htmlspecialchars($data['blog_content'])) ?>
                   <br />
                   <br />
                   <strong><a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-success">Lire la suite</a></strong>
