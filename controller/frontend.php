@@ -1,6 +1,7 @@
 <?php
  require_once('model/PostManager.php');
  require_once('model/CommentManager.php');
+ require_once('model/RegisterManager.php');
 
  function listPosts()
  {
@@ -33,4 +34,27 @@ function addComment($postId, $memberId, $comment)
     else {
         header('Location: index.php?action=post&id=' . $postId);
     }
+}
+
+function signUp($pseudo, $email, $pass_hache)
+{
+	 $registerManager = new RegisterManager();
+	 $newMember = $registerManager->newMemberLogin($pseudo, $email, $pass_hache);
+	
+	 require('view/frontend/registerView.php');
+}
+
+function authentification()
+{
+	$authentificationManager = new AuthentificationManager();
+	$login = $authentificationManager->CheckUser();
+
+	require('view/frontend/connectView.php');
+}
+
+function signupForm()
+{
+
+ require('view/frontend/registerView.php');
+	
 }
