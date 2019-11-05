@@ -1,5 +1,7 @@
 # p4_blog-for-a-writer
 
+### Olivier Toussaint - étudiant
+
 ## Projet n° 4 du cursus de _Développeur Web junior_ de l'école en ligne OpenClassrooms 
 
 Vous développerez une application de blog simple en PHP et avec une base de données MySQL. Elle doit fournir une interface frontend (lecture des billets) et une interface backend (administration des billets pour l'écriture). On doit y retrouver tous les éléments d'un __CRUD__ :
