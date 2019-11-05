@@ -4,7 +4,9 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
       <meta name="description" content="Jean Forteroche, écrivain et acteur, travaille sur son prochain roman, Un Billet simple pour l'Alaska et le publie par épisode en ligne" />
+
       <link rel="canonical" href="https://oliviertoussaint.fr/projet4/" />
       <meta property="og:locale" content="fr_FR" />
       <meta property="og:type" content="website" />
@@ -12,6 +14,7 @@
       <meta property="og:description" content="Jean Forteroche, écrivain et acteur, travaille sur son prochain roman, Un Billet simple pour l'Alaska et le publie par épisode en ligne" />
       <meta property="og:url" content="https://oliviertoussaint.fr/projet4/" />
       <meta property="og:site_name" content="Jean Forteroche" />
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:description" content="Jean Forteroche, écrivain et acteur, travaille sur son prochain roman, Un Billet simple pour l'Alaska et le publie par épisode en ligne" />
       <meta name="twitter:title" content="Jean Forteroche | Écrivain & acteur - Projet OpenClassrooms - Olivier Toussaint" />
