@@ -1,6 +1,5 @@
 # p4_blog-for-a-writer
-
-### Olivier Toussaint - étudiant
+ Olivier Toussaint - étudiant
 
 ## Projet n° 4 du cursus de _Développeur Web junior_ de l'école en ligne OpenClassrooms 
 
