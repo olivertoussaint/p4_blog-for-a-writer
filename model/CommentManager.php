@@ -39,7 +39,6 @@ class CommentManager extends DatabaseManager
         return $deletedComment;
      } 
 
-
      public function deleteCommentPost($postId)
      {
         $db = $this->dbConnect();

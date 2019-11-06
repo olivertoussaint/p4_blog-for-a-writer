@@ -96,8 +96,23 @@
 					</td>
 				<td>
 					<a href="index.php?action=updatePost&id=<?php echo $post['id'];?>" class="btn-floating btn-small wawes-effect wawes-light blue modal-trigger"><i class="material-icons">edit</i></a>
-					<a href="index.php?action=deletePost&id=<?php echo $post['id'];?>" class="btn-floating btn-small wawes-effect wawes-light red delete_comment"><i class="material-icons">delete</i></a>
-							
+
+					<!-- Modal Trigger -->
+            		<a class="wawes-effect wawes-light red delete_comment btn-floating btn-small modal-trigger" href="#modal1"><i class="material-icons">delete</i></a>
+					
+					 <!-- Modal Structure -->             
+            	<div id="modal1" class="modal">
+              		<div class="modal-content">
+                	<h4> Suppression du chapitre </h4>
+              		<p>
+                 		Êtes vous sûr de vouloir supprimer ce chapitre ?
+              		</p>
+              		<div class="modal-footer">
+                		<a class="modal-close btn-flat">Annuler</a>
+                		<a href="index.php?action=deletePost&id=<?php echo $post['id'];?>" class="modal-close btn-flat">Confirmer</a>
+              		</div>
+          			</div>
+        		</div>		
 				</td>
 			</tr>
 					<?php
@@ -113,7 +128,6 @@
 			?>
 			</tbody>
 		</table>
-
 
 		<div class="backToHome">
 	      <div class="row center">

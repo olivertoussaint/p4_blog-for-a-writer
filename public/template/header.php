@@ -46,7 +46,6 @@
         </div>
     </nav>
     </div>
-
               <ul class="sidenav" id="mobile-demo">        
                 <li class="active"><a href="index.php" title="Page d'accueil">Accueil</a></li>
                 <li><a href="index.php?action=aboutMe" title="A propos de l'auteur">A propos</a></li>

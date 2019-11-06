@@ -28,6 +28,7 @@
           </div>
         </div>
       </div>
+        <div class="container">
         <div class="container comments-field">
           <div class="comment-space">
           <h4 class="comment-space-title">Espace des commentaires</h4>
@@ -41,11 +42,12 @@
           </p>
           </div>
         </div>
+      </div>
   <?php 
         while ($comment = $comments->fetch())
         if (isset($_SESSION['pseudo']))
           { ?>
-
+        <div class="container">
         <p class="comment-user">
           <strong><?= htmlspecialchars($comment['pseudo']) ?></strong>
         </p>
@@ -55,12 +57,12 @@
         <p class="comment-comment">
             <?= nl2br(htmlspecialchars($comment['comment'])) ?>
         </p>
-          <div>
-            <p>
-              <a class="modal-trigger right" href="index.php?action=reporting&id=<?= $comment['id'] ?>">Signaler le commentaire</a>
-            </p>
-            <br />
-            <hr />
+        </div>
+          <div class="container">
+            <!-- Modal Trigger -->
+            <a class="modal-trigger" href="#modal1">Signaler le commentaire</a>
+
+             <!-- Modal Structure -->             
             <div id="modal1" class="modal">
               <div class="modal-content">
                 <h4> Signalement d'un commentaire </h4>
