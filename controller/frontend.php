@@ -39,6 +39,8 @@
     {
       $commentManager = new \Blog\JeanForteroche\Model\CommentManager();
       $reportedComment = $commentManager->reporting($postId);
+
+      header('Location: index.php');
     }
 
     function login()
@@ -57,10 +59,10 @@
         $pseudoChecked = $userManager->checkPseudo($pseudo);
         $emailChecked = $userManager->checkMail($mail);
         if ($pseudoChecked) {
-            header('Location: index.php?action=subscribe&error=invalidUsername');   
+            header('Location: index.php');   
         }
         if ($emailChecked) {
-            header('Location: index.php?action=subscribe&error=invalidMail');
+            header('Location: index.php');
         }
         if (!$pseudoChecked && !$emailChecked) {
             $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);            
@@ -81,7 +83,7 @@
             $_SESSION['pseudo'] = ucfirst(strtolower($pseudo));
             $_SESSION['role'] = $member['role'];
             header('Location: index.php');
-            echo 'Bienvenue ' . $_SESSION['pseudo'];
+            echo 'Bienvenu(e) ' . $_SESSION['pseudo'];
         } else {
             header('Location: index.php');
         }
