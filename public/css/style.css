@@ -13,7 +13,6 @@ main
 .backhome
 {
   position: relative;
-  right: 21%;
   top: 1%;
 }
 
@@ -22,26 +21,9 @@ main
     background-color: rgba(250,235,215,0.3);
     margin-bottom: 50px;
   }
-
-  .gabarit p
-  {
-    /*text-align: justify;*/
-  }
-
-  .gabarit h2,.gabarit h3
-  {
-    /*text-align: left;*/
-  }
-
   .fa-lg 
   {
     margin-left: 14px;
-  }
-
-  .backhome-button
-  {
-    margin-top: 20px;
-    margin-left: 5%;
   }
 
 p.comment-user
@@ -131,11 +113,15 @@ img.circle
 
 @media screen and (max-width: 600px) {
 
+  .backhome {
+    top: 0.5%;
+  }
   .backhome-button {
     margin-top: 0;
-    margin-left: 17%;
+    margin-left: 1%;
   }
-  a.btn.btn-primary {
+
+  a.waves-effect.waves-light.btn {
     font-size: 9px;
   }
   h4.chapter-title {
@@ -159,8 +145,15 @@ img.circle
     font-size: 9px;
     padding: 6px;
   }
+  
   p>img {
     margin-left: 89px;
+  }
+  p.signature {
+    font-size: 0.8em;
+  }
+  h4.left {
+    font-size: 1em;
   }
   ul.left-position>li.left-align {
     padding-left: 65px;
