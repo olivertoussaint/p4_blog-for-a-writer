@@ -4,7 +4,7 @@
       <div class="row backhome">
         <div class="col s12">
           <p class="backhome-button">
-            <a href="index.php" class="btn btn-primary"  >Retour à la liste des billets</a>
+            <a href="index.php" class="waves-effect waves-light btn blue"  >Retour à la liste des billets</a>
           </p>
         </div>
       </div>  
@@ -38,14 +38,14 @@
             <?= htmlspecialchars($nbComment['nombreComments']) ?> Commentaire<?php if ($nbComment['nombreComments'] >1) echo 's';?>
           </h5>
           <p class="no-comment">
-            <?php if ($nbComment['nombreComments'] ==0) echo "Aucun commentaire n'a été publié... Soyez le premier !";?>
+            <?php if ($nbComment['nombreComments'] == 0) echo "Aucun commentaire n'a été publié... Soyez le premier !";?>
           </p>
           </div>
         </div>
       </div>
   <?php 
         while ($comment = $comments->fetch())
-        if (isset($_SESSION['pseudo']))
+        if (isset($_SESSION['pseudo']) || empty($_SESSION))
           { ?>
         <div class="container">
         <p class="comment-user">
@@ -94,11 +94,10 @@
             <h4 class="left">Ajouter un commentaire : </h4>
             <br />
             <form action="index.php?action=addComment&amp;id=<?php echo $id ?>" method="post">
-              <label for="content">Commentaire : </label>
               <br />
-              <textarea id="comment" name="comment" class="form-control" placeholder="Saisir votre commentaire ici..."></textarea>
+              <textarea id="comment" name="comment" class="materialize-textarea" placeholder="Saisir votre commentaire ici..."></textarea>
               <br />
-              <button class="btn btn-primary">Publier</button>
+              <button class="waves-effect waves-light btn blue">Publier</button>
             </form>
           </div>
         </div>
@@ -112,7 +111,7 @@
   <?php if(isset($_SESSION) && empty($_SESSION)) 
         {
       ?>
-
+        
       <div class="container">
         <div class="row comment-chapter">
           <hr />
