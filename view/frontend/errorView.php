@@ -5,6 +5,7 @@
 	<?php ob_start(); ?>
 	<div class="jumbotron text-center">
 	<h1 class="error">Oups... Une erreur s'est produite !</h1>
+	<p><?php echo $errorMessage ?></p>
 	<img class="img-responsive img-error" src="public/images/img-404-error.PNG"
 	     alt="Image d'erreur 404 page n'existe pas." />
 	<br />
