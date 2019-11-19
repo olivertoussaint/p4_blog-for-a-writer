@@ -1,4 +1,5 @@
 # p4_blog-for-a-writer
+<<<<<<< HEAD
  Olivier Toussaint - étudiant
 
 ## Projet n° 4 du cursus de _Développeur Web junior_ de l'école en ligne OpenClassrooms 
@@ -17,3 +18,6 @@ L'interface d'administration sera protégée par mot de passe. La rédaction de 
 
 Vous développerez en PHP sans utiliser de framework pour vous familiariser avec les concepts de base de la programmation. __Le code sera construit sur une architecture MVC.__ Vous développerez autant que possible en orienté objet (au minimum, le modèle doit être construit sous forme d'objet).
 
+=======
+personnal project
+>>>>>>> 0d8b3208c23306dfa81b0fa8fb60df5b7e9c4c90
