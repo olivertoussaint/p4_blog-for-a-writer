@@ -1,4 +1,4 @@
-    <?php
+<?php
     require_once('model/PostManager.php');
     require_once('model/CommentManager.php');
     require_once('model/UserManager.php');
@@ -18,8 +18,15 @@
         $post = $postManager->getPost($_GET['id']);
         $comments = $commentManager->getComments($_GET['id']);
         $nbComments = $commentManager->countNumberComments($_GET['id']);
-        $posts = $postManager->getPosts();
+        if (!empty($post)) {
+
         require('view/frontend/postView.php');
+
+        } else {
+            
+           header('Location: index.php'); 
+           exit;
+        }
     }
 
     function addComment($postId, $memberId, $comment)
@@ -29,7 +36,9 @@
         if ($affectedLines === false) {
             throw new Exception('Impossible d\'ajouter le commentaire !');
         } else {
+            
             header('Location: index.php?action=post&id=' . $postId);
+             exit;
         }
         
         require('view/frontend/postView.php');
@@ -41,6 +50,7 @@
       $reportedComment = $commentManager->reporting($postId);
 
       header('Location: index.php');
+       exit;
     }
 
     function login()
@@ -59,14 +69,19 @@
         $pseudoChecked = $userManager->checkPseudo($pseudo);
         $emailChecked = $userManager->checkMail($mail);
         if ($pseudoChecked) {
-            header('Location: index.php');   
+            header('Location: index.php');
+             exit;   
         }
         if ($emailChecked) {
             header('Location: index.php');
+             exit;
         }
         if (!$pseudoChecked && !$emailChecked) {
             $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);            
             $newMember = $userManager->createMember($pseudo, $mail, $pass);
+
+            header('Location: index.php');
+            exit;
         }   
     } 
 
@@ -76,16 +91,23 @@
         $member = $userManager->loginMember($pseudo);
         $isPasswordCorrect = password_verify($_POST['password'], $member['password']);
         if (!$member) {
+
             header('Location: index.php');
+            exit;
+
         } else {
          if ($isPasswordCorrect) {
             $_SESSION['id'] = $member['id'];
             $_SESSION['pseudo'] = ucfirst(strtolower($pseudo));
             $_SESSION['role'] = $member['role'];
-            header('Location: index.php');
-            echo 'Bienvenu(e) ' . $_SESSION['pseudo'];
+
+             header('Location: index.php');
+              exit;
+
         } else {
+
             header('Location: index.php');
+             exit;
         }
     }
     }
@@ -100,7 +122,9 @@
         session_start();
         $_SESSION = array();
         session_destroy();
+
         header("Location: index.php");
+         exit;
     }
 
     function countComments($postId)

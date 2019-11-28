@@ -1,4 +1,4 @@
-	<?php
+<?php
 	require_once('model/PostManager.php');
 	require_once('model/CommentManager.php');
 	require_once('model/UserManager.php');
@@ -9,6 +9,7 @@
 		$commentManager = new \Blog\JeanForteroche\Model\CommentManager();
 		$posts = $postManager->getPosts();
 		$comments = $commentManager->getReporting();
+		
 		require('view/backend/dashboard.php');
 	}
 
@@ -32,6 +33,14 @@
 	{
 		$postManager = new \Blog\JeanForteroche\Model\PostManager();	
 		$updatedPost = $postManager->updatePost($title, $content, $id);
+
+		if ($updatedPost === false) {
+			throw new Exception('Impossible de modifier le chapitre.');
+		} else {
+
+			header('Location: index.php?action=administration');
+			exit;
+		}
 	}
 
 	function createPost() 
@@ -45,6 +54,7 @@
 		$newPost = $postManager->createPost($title, $content);
 
 		header('Location: index.php?action=administration');
+		 exit;
 	}
 
 	function removePost($postId)
@@ -53,6 +63,7 @@
 		$deletedPost = $postManager->deletePost($postId);
 
 		header('Location: index.php?action=administration');
+		 exit;
 	}
 
 	function removeComment($commentId)
@@ -61,11 +72,15 @@
 		$deletedComment = $commentManager->deleteComment($commentId);
 
 		header('Location: index.php?action=administration');
+		 exit;
 	}
 
 	function approveComment($postId)
 	{
 		$commentManager = new \Blog\JeanForteroche\Model\CommentManager();
 		$approvedComment = $commentManager->validatecomment($postId);
+
+		header('Location: index.php?action=administration');
+		 exit;
 	}
 
