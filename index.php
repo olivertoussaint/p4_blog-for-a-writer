@@ -74,7 +74,8 @@ try {
 
                   } else {
                          throw new Exception('Vous n\'êtes pas autorisé à accéder à cette partie du site');
-                         header("Location: index.php");             
+                         header("Location: index.php");
+                          exit;             
                   } 
         } 
         elseif ($_GET['action'] == 'updatePost') {
