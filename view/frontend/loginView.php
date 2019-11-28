@@ -1,6 +1,5 @@
-<?php ob_start(); ?>
 <?php $title ='Login du membre'; ?>  
-
+<?php ob_start(); ?>
     <div id="admin-page"></div>
         
         <div class="container login-form">
@@ -25,7 +24,7 @@
             </div>
             <div id="required">
                 <p><span class="required">*&nbsp;</span>champ requis</p>
-                <p class="link_login-2"><a href="index.php?action=signup" title="Cliquez ici pour créer votre espace membre">Pas encore membre ?</a></p>
+                <p class="link_login-2"><a href="index.php?action=register" title="Cliquez ici pour créer votre espace membre">Pas encore membre ?</a></p>
                 <p class="back-to-home-2"><a href="index.php" title="retour à la page d'accueil">Retour à la page d'accueil</a></p>
             </div>
 

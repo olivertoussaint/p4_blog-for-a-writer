@@ -1,6 +1,5 @@
-    <?php $title ='Inscription du membre'; ?> 
-
-    <?php ob_start(); ?> 
+<?php $title ='Inscription du membre'; ?> 
+<?php ob_start(); ?> 
 
     <?php 
         if (isset($_GET['error']) && $_GET['error'] == 'invalidUsername') {

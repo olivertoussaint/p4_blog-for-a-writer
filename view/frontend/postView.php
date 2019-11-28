@@ -1,6 +1,5 @@
-  <?php $title ='Commentaires';
-   ?>
-  <?php ob_start(); ?>
+<?php $title ='Commentaires';?>
+<?php ob_start(); ?>
       <div class="row backhome">
         <div class="col s12">
           <p class="backhome-button">
@@ -12,8 +11,9 @@
         <div class="row">
             <h4 class="chapter-title">
               <p class=" center-align">
-              Chapitre&nbsp;:&nbsp;
+              Chapitre&nbsp;<?= $_GET['id']; ?>&nbsp;:&nbsp;
               <?= $post['post_title'] ?>
+              </p>
             </h4>
             <hr />
               <div class="news">
@@ -95,9 +95,9 @@
             <br />
             <form action="index.php?action=addComment&amp;id=<?php echo $id ?>" method="post">
               <br />
-              <textarea id="comment" name="comment" class="materialize-textarea" placeholder="Saisir votre commentaire ici..."></textarea>
+              <textarea id="comment" name="comment" class="materialize-textarea"  data-length="120" placeholder="Saisir votre commentaire ici..."></textarea>
               <br />
-              <button class="waves-effect waves-light btn blue">Publier</button>
+              <button class="btn waves-effect waves-teal">Publier</button>
             </form>
           </div>
         </div>

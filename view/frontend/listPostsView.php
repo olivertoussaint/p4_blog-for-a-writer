@@ -1,10 +1,5 @@
-  <?php
-    $title = 'Billet simple pour l\'Alaska - Jean Forteroche';
-    ?> 
-
-      <?php
-    ob_start();
-    ?>
+<?php $title = 'Billet simple pour l\'Alaska - Jean Forteroche';?> 
+<?php ob_start();?>
           <div class="container">
             <div class="row">
               <div id="main-title">
@@ -32,7 +27,7 @@
                     <img class="activator" src="./public/uploads/<?= ($data['image']) ?>" alt="<?= htmlspecialchars($data['post_title']) ?>" />
                   </div>
           <div class="card-content">
-              <h5 class="grey-text text-darken-2">Chapitre&nbsp;&nbsp;:&nbsp;<strong><?= htmlspecialchars($data['post_title']) ?></strong></h5>  
+              <h5 class="grey-text text-darken-2">Chapitre&nbsp;<?= $data['id']; ?>&nbsp;:&nbsp;<strong><?= htmlspecialchars($data['post_title']) ?></strong></h5>  
               <h6 class="post-date">publié le <?= $data['post_date_fr'] ?></h6>
               <h6 class="right">par :&nbsp; Jean Forteroche</h6> 
           </div>      
