@@ -1,14 +1,12 @@
-    <?php
-      $title = "Nouvel article";
-    ?> 
-    <?php ob_start(); ?>
+<?php $title = "Nouvel article";?> 
+<?php ob_start(); ?>
     <h3 class="new-post-title">Rédaction d'un nouveau chapitre</h3>
     <div id="admin-page"></div>
-    <div class="container login-form">
+    <div class="container create-form">
         <div class="col-lg-12"></div>
-            <div class="col-lg-3">
+            <div class="col-lg-10 col-md-12 col-xs-12">
                 <form action="index.php?action=submitPost" method="POST">
-                        <div class="form-group">
+                        <div class="form-group" id="title">
                             <label for="title">Titre</label>
                                 <div>
                                     <input type="text" name="title" class="form-control" id="title" placeholder="Indiquez ici un titre au chapitre" />

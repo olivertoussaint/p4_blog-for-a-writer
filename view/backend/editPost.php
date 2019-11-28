@@ -1,18 +1,13 @@
-	<?php 
-	$title = 'Modifier un billet'; 
-	?>
-
-	<?php ob_start(); ?>
-	<div>
-		<h3 class="edit-post-title">Modifier le post</h3>
-	</div>
+<?php $title = 'Modifier un billet'; ?>
+<?php ob_start(); ?>
 
 	<div id="admin-page"></div>
-	<div class="container login-form">
+	<h3 class="edit-post-title">Modifier le post</h3>
+	<div class="container edit-form">
 		<form action="index.php?action=postUpdate&id=<?= $_GET['id'];?>" method="POST">
 	    	<div class="col-lg-12"></div>
-	    	<div class="col-lg-4">	        
-	        	<div class="form-group">
+	    	<div class="col-lg-10 col-md-12 col-xs-12">	        
+	        	<div class="form-group" id="title">
 	            	<label for="title">Titre</label>
 	            <div>
 	                <input type="text" name="post_title" id="post_title" value="<?= $post['post_title'];?> " />
