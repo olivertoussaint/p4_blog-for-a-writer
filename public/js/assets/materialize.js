@@ -15,4 +15,8 @@ var _get=function t(e,i,n){null===e&&(e=Function.prototype);var s=Object.getOwnP
 
   	$(document).ready(function(){
     $('.tooltipped').tooltip();
-  });
+  	});
+
+  	$(document).ready(function() {
+    $('input#input_text, textarea#comment').characterCounter();
+  	});

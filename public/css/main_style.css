@@ -29,7 +29,8 @@ main
 {
   flex: 1 0 auto;
 }
-#mobile-demo>li.welcome {
+#mobile-demo>li.welcome 
+{
   text-align: center;
   font-weight: 700;
   background-color: lightcyan;
@@ -37,12 +38,19 @@ main
 
 a.sidenav-trigger
 {
-    color: #26a69a;
+  color: #26a69a;
+}
+
+ul.sidenav 
+{
+  /*background-color: rgba(224,255,255, 0.5);*/
+  background: linear-gradient(#ffff99, #66ccff);  
 }
 
 img.responsive-img 
 {
-  padding-top: 2px;
+  padding-top: 1px;
+  width: 72%;
 }
 
 footer.page-footer 
@@ -57,46 +65,61 @@ footer.page-footer
 
 @media screen and (max-width: 600px) {
 
- a>img.responsive-img {
-    max-width: 87%;
+  a>img.responsive-img 
+  {
+    max-width: 64%;
   }
 
-  h1.title {
+  h1.title 
+  {
     font-size: 3em;
     margin-left: 20px;
   }
-  h5#author-header-preface {
+  h5#author-header-preface 
+  {
     font-size: 12px;
   }
-  h6#author-preface {
+  h6#author-preface
+  {
     font-size: 10px;
   }
-  .blue.lighten-5 {
+  .blue.lighten-5 
+  {
     width: 100%;
     padding: 5px;
   }
-  h5.grey-text.text-darken-2 {
+  h5.grey-text.text-darken-2 
+  {
     font-size: 12px;
     line-height: 2px;
   }
-  h6.post-date {
+
+  h6.post-date 
+  {
     font-size: 10px;
     padding: 0;
   }
-  h6.right {
+  h6.right 
+  {
     font-size: 11px;
     padding: 0;
   }
-  .waves-effect.btn {
+  .waves-effect.btn 
+  {
     font-size: 9px;
   }
-  p>img {
+  p>img 
+  {
     margin-left: 89px;
   }
-  ul.left-position>li.left-align {
+
+  ul.left-position>li.left-align 
+  {
     padding-left: 65px;
   }
-  .footer-copyright {
+
+  .footer-copyright 
+  {
     font-size: 10px;
   }
 }

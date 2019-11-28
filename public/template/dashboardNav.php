@@ -1,17 +1,14 @@
-	<?php
+<?php
 			$tables = [
-
 	 			"Publications"    => "blog_posts",
 	 			"Commentaires"    => "comments",
 	 			"Membres" => "members"
 			];
-
 			$colors = [
 				"blog_posts" => "green",
 				"comments" => "red",
 				"members" => "blue",
 			];
-
 	?>
 			<?php
 	        $UserManager = new \Blog\JeanForteroche\Model\UserManager();	 	
@@ -46,12 +43,10 @@
 				<tbody>
 			<?php
 			if(!empty($comments)) {
-
 			foreach ($comments as $comment) {
-
 				?>
 				<tr class="z-depth-5">
-					<td><?= $comment['id_post_blog'];?></td>
+					<td><strong>Chapitre</strong>&nbsp;<?= $comment['id_post_blog'];?></td>
 					<td><?= $comment['comment'];?></td>
 					<td><a class="btn tooltipped" data-position="left" data-tooltip="valider le commentaire" href="index.php?action=validateComment&id=<?= $comment['id'] ?>" class="btn-floating btn-small wawes-effect wawes-light blue notifications_off"><i class="material-icons">notifications_off</i></a>
 					<a class="btn tooltipped" data-position="right"  data-tooltip="Supprimer le commentaire" href="index.php?action=deleteComment&id=<?= $comment['id'] ?>"><i class="material-icons">delete</i></a>

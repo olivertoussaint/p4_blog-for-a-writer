@@ -1,5 +1,6 @@
 html,body
 {
+  background: url(../../public/images/admin_background_image.jpg) no-repeat center center fixed;
   height: 100%;
   width: 100%;
 }
@@ -24,13 +25,15 @@ html,body
   z-index: 2;
 }
 
-.edit-post-title, .new-post-title{
+.edit-post-title, .new-post-title
+{
 	text-align: center;
 	font-family: cursive;
 	font-size: 30px;
 }
 
-#post-title{
+#post-title
+{
   text-align: center;
   font-family: cursive;
   font-size: 25px;
@@ -66,18 +69,26 @@ html,body
 {
 	margin-left: 50%;
 }
-
-input,.btn.btn-primary.register-user
+.form-control #title 
 {
-	width: 100%;
+  width: 50%;
+}
+input #title
+{
+	width: 50%;
+}
+
+input#title.form-control  
+{
+  width: 50%;
 }
 
 .form-group>label
 {
   padding: 5px;
-  margin: 2% auto;
+  background-color: rgba(255, 250, 250, 0.5);
   font-size: 14px;
-  color: #FFF;
+  border-radius: 4px;
 }
 
 .btn.btn-primary.register-user
@@ -191,19 +202,37 @@ p
   h5.card-header {
     font-size: 1em;
   }
+
+  .new-post-title {
+    font-size: 25px;
+  }
+
   p.link_login-2 {
     position: unset;
     padding-top: 0;  
     float: left;
   }
+
   .link_login-2 a {
     font-size: 12px;
   }
+
   .btn.btn-primary.user {
     font-size: 12px;
   }
+
   .back-to-home-2 {
     left: 10%;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+  
+  .btn-info {
+    margin-left: 0;
+    margin-top: 16px;
+    width: 100%;
   }
 
 }
